@@ -1,6 +1,10 @@
 
+type Data = {
+    title: string;
+    text: string
+}
 
-export const LabelComponent = ({ title, text }: any) => {
+export const LabelComponent = ({ title, text }: Data) => {
     return (
         <div className='flex items-center justify-between ' >
             <div>

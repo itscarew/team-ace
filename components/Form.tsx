@@ -12,15 +12,19 @@ export const FormComponent = () => {
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         const formattedValue = event.target.value
-            .replace(/[^0-9]/g, '') // Remove non-digit characters
-            .replace(/(\d{4})/g, '$1  ') // Add a dash after every four digits
-            .trim(); // Remove any leading/trailing spaces
+            .replace(/[^0-9]/g, '')
+            .replace(/(\d{4})/g, '$1  ')
+            .trim();
 
         setInputValue(formattedValue);
     };
 
+    const submit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+    }
+
     return (
-        <form>
+        <form onSubmit={submit} >
             <div className='mb-6' >
                 <div className='flex items-center justify-between mb-6' >
                     <div>
@@ -78,7 +82,7 @@ export const FormComponent = () => {
                 </div>
             </div>
 
-            <button className='w-full bg-blue-700 text-white text-center font-semibold rounded-lg h-16 my-4' >
+            <button className='w-full bg-blue-700 text-white text-center font-semibold rounded-lg h-16 my-4'  >
                 Pay Now
             </button>
         </form>
