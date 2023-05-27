@@ -1,10 +1,8 @@
 import Head from 'next/head'
-import { Inter } from '@next/font/google'
 import { HeaderComponent } from '@/components/Header'
 import { FormComponent } from '@/components/Form'
-import { TbNotes } from "react-icons/tb"
-import { RiAppleFill } from "react-icons/ri"
-import { TfiClose } from "react-icons/tfi"
+import { PayComponent } from '@/components/PayComponent'
+import { TfiClose } from 'react-icons/tfi'
 
 export default function Home() {
   return (
@@ -16,50 +14,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='bg-gray-200 w-full  min-h-screen flex items-center justify-center ' >
-        <div className='bg-white w-[75%] h-[70%] flex ' >
-          <div className='w-[64%] py-8 px-8'>
+        <div className='bg-white w-[70%] h-[70%] flex relative ' >
+          <div className='w-11 h-9 bg-gray-50 absolute top-0 right-0 flex items-center justify-center'> <TfiClose /> </div>
+          <div className='w-[68%] py-8 pl-12 pr-6'>
             <HeaderComponent />
             <FormComponent />
           </div>
-          <div className='bg-red-100 flex-1 py-8 px-16 relative'>
-            <div className='w-11 h-9 bg-gray-50 absolute top-0 right-0 flex items-center justify-center'> <TfiClose /> </div>
-            <div className='bg-white h-full flex flex-col justify-end ' >
-              <div className='relative'>
-                <div className='w-8 h-8 bg-red-100 rounded-full absolute bottom-[6rem] -left-4 ' ></div>
-                <div className='w-8 h-8 bg-red-100 rounded-full absolute bottom-[6rem] -right-4' ></div>
-                <div></div>
-                <div className='bg-gray-200 h-80 border-b-gray-400 border-b-2 border-dashed rounded-t-2xl flex flex-col justify-end px-8 pb-4' >
-                  <div className='flex justify-between items-center pb-2.5 text-sm  ' >
-                    <p>Company</p>
-                    <div className='font-bold flex items-center' >
-                      <div className='bg-blue-900 rounded-full h-4 w-4 flex items-center justify-center mr-1' > <RiAppleFill color='white' size={10} /> </div>
-                      <p>  Apple </p>
-                    </div>
-                  </div>
-                  <div className='flex justify-between items-center pb-2.5 text-sm  ' >
-                    <p>Order Number</p>
-                    <p className='font-bold' >1266201 </p>
-                  </div>
-                  <div className='flex justify-between items-center pb-2.5 text-sm  ' >
-                    <p>Product</p>
-                    <p className='font-bold' > Macbook Air </p>
-                  </div>
-                  <div className='flex justify-between items-center pb-2.5 text-sm  ' >
-                    <p>VAT(20%)</p>
-                    <p className='font-bold' >$100.00 </p>
-                  </div>
-                </div>
-                <div className='bg-gray-200 h-[7rem] rounded-b-2xl flex items-center justify-between px-8'>
-                  <div>
-                    <p className='text-sm' >You have to pay</p>
-                    <div><span className='text-2xl font-bold' >549</span><span className='text-sm'>.99</span><span className='text-sm' > USD</span>  </div>
-                  </div>
-                  <div>
-                    <TbNotes size={30} />
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className='flex-1 py-12 pl-6 pr-12 relative'>
+            <PayComponent />
           </div>
         </div>
       </div>

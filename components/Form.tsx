@@ -28,8 +28,8 @@ export const FormComponent = () => {
             <div className='mb-6' >
                 <div className='flex items-center justify-between mb-6' >
                     <div>
-                        <h1 className='font-bold'>Card Number</h1>
-                        <p className='text-xs font-semibold text-gray-400 mt-1' >Enter the 16-digit card number on the card</p>
+                        <h1 className='font-bold text-darkblue-900 '>Card Number</h1>
+                        <p className='text-xs font-semibold  text-gray-400 mt-1' >Enter the 16-digit card number on the card</p>
                     </div>
                     <div className='flex items-center text-blue-400 cursor-pointer' > <MdEdit /> <span className='ml-1 font-semibold' >Edit</span>  </div>
                 </div>
@@ -82,7 +82,7 @@ export const FormComponent = () => {
                 </div>
             </div>
 
-            <button className='w-full bg-blue-700 text-white text-center font-semibold rounded-lg h-16 my-4'  >
+            <button className='w-full bg-blue-600 text-white text-center font-semibold rounded-lg h-16 my-4'  >
                 Pay Now
             </button>
         </form>
