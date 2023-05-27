@@ -26,7 +26,7 @@ export const FormComponent = () => {
     return (
         <form onSubmit={submit} >
             <div className='mb-6' >
-                <div className='flex items-center justify-between mb-6' >
+                <div className='flex items-center justify-between md:mb-6 mb-4' >
                     <div>
                         <h1 className='font-bold text-darkblue-900 '>Card Number</h1>
                         <p className='text-xs font-semibold  text-gray-400 mt-1' >Enter the 16-digit card number on the card</p>
@@ -35,7 +35,7 @@ export const FormComponent = () => {
                 </div>
                 <div className='flex items-center relative' >
                     <input className='border border-gray-300 w-full h-14 rounded-lg focus:bg-gray-50 outline-none px-14 font-semibold'
-                        placeholder='2456&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp; 2456&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;2456&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;2456'
+                        placeholder='2412&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp; 7512&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;3456&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;2456'
                         value={inputValue}
                         onChange={handleChange}
                     />
@@ -44,9 +44,9 @@ export const FormComponent = () => {
                 </div>
             </div>
 
-            <div className='mb-6 flex items-center justify-between' >
+            <div className='mb-6 flex flex-wrap items-center justify-between' >
                 <LabelComponent title="CVV Number" text="Enter the 3 or 4 digit number on the card" />
-                <div className='flex items-center ml-[1rem] w-[55%]' >
+                <div className='flex items-center md:ml-[1rem] ml-0 md:w-[55%] w-full' >
                     <input className='border border-gray-300 w-full h-14 rounded-lg focus:bg-gray-50 outline-none px-36 font-semibold'
                         placeholder='327'
                     />
@@ -54,9 +54,9 @@ export const FormComponent = () => {
                 </div>
             </div>
 
-            <div className='mb-6 flex items-center justify-between' >
+            <div className='mb-6 flex flex-wrap items-center justify-between' >
                 <LabelComponent title="Expiry Date" text="Enter the expiration date of the card" />
-                <div className="flex items-center  w-[55%] " >
+                <div className="flex items-center md:ml-[1rem] ml-0  md:w-[55%] w-full " >
                     <div className='flex items-center w-[50%]' >
                         <input className='border border-gray-300 w-full h-14 rounded-lg focus:bg-blue-50 focus:border-blue-700 focus:border-[2.5px] focus:text-blue-700 outline-none text-center font-semibold'
                             placeholder='09'
@@ -71,12 +71,12 @@ export const FormComponent = () => {
                 </div>
             </div>
 
-            <div className='mb-6 flex items-center justify-between' >
+            <div className='mb-6 flex flex-wrap items-center justify-between' >
                 <LabelComponent title="Password" text="Enter your dynamic password" />
-                <div className='flex items-center  ml-[1rem] w-[55%]' >
+                <div className='flex items-center  md:ml-[1rem] ml-0 md:w-[55%] w-full' >
                     <input className='border border-gray-300 w-full h-14 rounded-lg focus:bg-gray-50 outline-none pl-8 pr-12 font-semibold'
                         type={"password"}
-                        placeholder="* * * * * * * * *"
+                        placeholder=""
                     />
                     <span className='-ml-10 text-gray-500'> <IoIosKeypad size={24} /> </span>
                 </div>

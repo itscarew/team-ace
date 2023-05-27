@@ -14,13 +14,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='bg-gray-200 w-full  min-h-screen flex items-center justify-center ' >
-        <div className='bg-white w-[70%] h-[70%] flex relative ' >
+        <div className='bg-white w-[70%] h-[70%] flex md:flex-row flex-col  relative ' >
           <div className='w-11 h-9 bg-gray-50 absolute top-0 right-0 flex items-center justify-center'> <TfiClose /> </div>
-          <div className='w-[68%] py-8 pl-12 pr-6'>
+          <div className='md:w-[68%] w-full  py-8 md:pl-12 md:pr-6 px-8'>
             <HeaderComponent />
             <FormComponent />
           </div>
-          <div className='flex-1 py-12 pl-6 pr-12 relative'>
+          <div className='flex-1 py-12 md:pl-6 md:pr-12 px-8 relative'>
             <PayComponent />
           </div>
         </div>
