@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='bg-gray-200 w-full  min-h-screen flex items-center justify-center ' >
-        <div className='bg-white w-[70%] h-[70%] flex md:flex-row flex-col  relative ' >
+        <div className='bg-white md:w-[70%] w-[95%] md:h-[70%] h-full flex md:flex-row flex-col  relative ' >
           <div className='w-11 h-9 bg-gray-50 absolute top-0 right-0 flex items-center justify-center'> <TfiClose /> </div>
           <div className='md:w-[68%] w-full  py-8 md:pl-12 md:pr-6 px-8'>
             <HeaderComponent />
